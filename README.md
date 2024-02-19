@@ -5,9 +5,10 @@ Ryan Fisher
 #### Executive summary
 
 #### Rationale
-The flow into wastewater treatment plants is influenced by precipitation and groundwater that infiltrates into the wastewater collections systems. This is a particular for old againg infrasture in wet areas such as the Northeast United States. The spike in flows to a treatment plant require the operations staff to adjust treatment operations, place additional treat basins in service and call up addition operations staff to react to the sudden increase in flows. The high flows caused by precipitation events can cause overflows, bypass of treatment or damage to equipment. 
+The flow into wastewater treatment plants is influenced by precipitation and groundwater that infiltrates into the wastewater collections system piping. This is a particular for old againg infrasture in wet areas such as the Northeast United States. The spike in flows to a treatment plant require the operations staff to adjust treatment operations, place additional treat basins in service and call up addition operations staff to react to the sudden increase in flows. The high flows caused by precipitation events can cause overflows, bypass of treatment or damage to equipment. 
 
 The increase in flows is typically unknown to the operators and they rely on their intuition to estimate the increase in flows due to forecasted weather events. The intent of the project is to develop a machine learning model to help predict the flow to the treatment plant based on forecasted precipitation events. 
+
 
 #### Research Question
 Can a machine learning model be utilized to predict the flows at a wastewater treatment given the current known conditions and the available forecast storm precipitation event? 
@@ -24,16 +25,16 @@ The data from the three different source was cleaned and combined into one datas
 A regression model was trained on the data and scored based performation with a set of testing data.
 
 The features used as input to the model include:
-Forecast Temperature 
-Forecast Precipitation
-Todays temperature
-Todays precipitation
-Todays wwtp flow
-Todays river flow
-Yesterdays temperature
-Yesterdays precipitation
-Yesterdays wwtp flow
-Yesterdays river flow
+- Forecast Temperature 
+- Forecast Precipitation
+- Todays temperature
+- Todays precipitation
+- Todays wwtp flow
+- Todays river flow
+- Yesterdays temperature
+- Yesterdays precipitation
+- Yesterdays wwtp flow
+- Yesterdays river flow
 
 The target data to predict in the model is the forecast wwtp flows for tomorrow. 
 
@@ -63,9 +64,7 @@ The precipitation data was found be the most significant feature in the flow pre
 
 #### Outline of project
 
-- [Link to notebook 1]()
-- [Link to notebook 2]()
-- [Link to notebook 3]()
+
 
 
 ##### Contact and Further Information
