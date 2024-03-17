@@ -3,9 +3,10 @@
 Ryan Fisher
 
 #### Executive summary
+The flow into wastewater treatment plants can be predicted by utilizing a linear regression machine learning model. Various models were investigated for this application using data from a treatment plant in New York State. The Ridge Regression Model was determined to provide the best predicition of flow. 
 
 #### Rationale
-The flow into wastewater treatment plants is influenced by precipitation and groundwater that infiltrates into the wastewater collections system piping. This is a particular for old againg infrasture in wet areas such as the Northeast United States. The spike in flows to a treatment plant require the operations staff to adjust treatment operations, place additional treat basins in service and call up addition operations staff to react to the sudden increase in flows. The high flows caused by precipitation events can cause overflows, bypass of treatment or damage to equipment. 
+The flow into wastewater treatment plants is influenced by precipitation and groundwater that infiltrates into the wastewater collections system piping. This is a particular for old aging infrasture in wet areas such as the Northeast United States. The spike in flows to a treatment plant require the operations staff to adjust treatment operations, place additional treat basins in service and call up addition operations staff to react to the sudden increase in flows. The high flows caused by precipitation events can cause overflows, bypass of treatment or damage to equipment. 
 
 The increase in flows is typically unknown to the operators and they rely on their intuition to estimate the increase in flows due to forecasted weather events. The intent of the project is to develop a machine learning model to help predict the flow to the treatment plant based on forecasted precipitation events. 
 
@@ -15,7 +16,7 @@ Can a machine learning model be utilized to predict the flows at a wastewater tr
 
 #### Data Sources
 Three sources are data will be utilized to build a training and test set for the model.
-1. Flow data and precipiation data collection from a treatment in Rockland County, New York will be utilized. The data include the daily average influent flow to the treatment plant and the daily precipitation received. 
+1. Flow data data collection from a treatment in Rockland County, New York was utilized. The data include the daily average influent flow to the treatment plant.
 2. Data collected from the nearest National Weather Service monitoring station. The information from the station include precipitation and temperature will be utilized in the model.
 3. River flow data from a U.S. Geologic stream gauging station. The flow data will be utilized in the model to infer groundwater and the potential on water infiltration into the wastewater collection system. 
 
