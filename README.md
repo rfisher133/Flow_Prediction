@@ -26,21 +26,9 @@ A regression model was trained on the data and scored based performation with a 
 
 The features used as input to the model include:
 - Forecast Precipitation
-- Current and hsitoric precipitation
+- Current and historic precipitation
 - Current and historic treatment plant flow
 - Current and historic river flow
-
-The target data to predict in the model is the forecast wwtp flows for the following day. 
-  Model	      Train MAE	Test MAE	Test R2 Score
-  Base Model	3.21	3.16	-0.01
-  Linear Regression	1.51	1.78	0.63
-  Polynomial Regression	1.21	3.05	-3.31
-  Ridge Regression	1.54	1.72	0.67
-  Lasso Regression	1.51	1.75	0.65
-  KNeighborsRegressor	0	1.92	0.52
-  SVR	0.97	1.84	0.61
-
-
 
 The following SciKitLearn regression models were utilized:
 - Linear Regression
@@ -57,7 +45,9 @@ Models were evaulated on Mean Absolute Error (MAE) and the R2 score. The MAE was
  - Polynmial regression overfit on the training data and did not provide good results for this data.
  - The KNeighbors and SVR did well but not as good as the Ridge and Lasso Regression.
 The results of the models evaluated are shown in the table below. The results are compared to a base model where the predicted flow is edqual to mean flow at the treatment plant. 
-
+    <center>
+        <img src = images/flow_results.png width = 35%/>
+    </center>
 
 The Features that were most important in the best model (Ridge Regression) were: 
 
