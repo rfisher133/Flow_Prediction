@@ -53,18 +53,19 @@ The following SciKitLearn regression models were utilized:
 
 #### Results
 Models were evaulated on Mean Absolute Error (MAE) and the R2 score. The MAE was chosen to avoid overfitting on the few peak flows that are far from the average.
-The results of the models used are shown in the table below.
+ - Ridge and Lasso regression were the best performing models.
+ - Polynmial regression overfit on the training data and did not provide good results for this data.
+ - The KNeighbors and SVR did well but not as good as the Ridge and Lasso Regression.
+The results of the models evaluated are shown in the table below. The results are compared to a base model where the predicted flow is edqual to mean flow at the treatment plant. 
 
 
-- The Ridge regression model had the best reuslts.
-- The most important features were found to be:
-  -wwtp flow yesterday
-  -wwtp flow today
-  -precipitation rain today
-  -river flow today
-  -precipitation rain forecast
-  -temperature minimum yeasterday
+The Features that were most important in the best model (Ridge Regression) were: 
 
+ - Recent historical flow to the treatment plant.
+ - Precipitation received in the afternoon of the current day.
+ - precipitation forceast in the morning of the next day.
+ - Current day flow at the treatment plant.
+ - Flow in the adjacent river on the current day.
 
 #### Next steps
 The precipitation data was found be the most significant feature in the flow prediction as anticipated. There is a known lag from the receiveing preciptation to the increase in flows at the treatment plant. However, the precipation data is a daily value only and precipiation received in the morning would have more of an influence on the daily treatment plant flow than precipitation recieved in the evening that would not result in treatment plant flow increase until the start of the next day. Therefore, it would be advantages to obtain precipration data on an hourly basis instead of a daily basis to potentially improve the prediction model. 
