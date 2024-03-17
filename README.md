@@ -63,7 +63,7 @@ The Features that were most important in the best model (Ridge Regression) were:
 
 The treatment plant in this project has a mean flow of 23 million gallons per day (mgd) with a range of from from  13 mgd to 64 mgd. The Ridge model was able to predict the flow of treatment plant with a +/- 1.7 (mgd). The flow prediction test set graph is shown below. 
     <center>
-        <img src = images/result_graph.png width = 60%/>
+        <img src = images/result_graph.png width = 80%/>
     </center>
 #### Next steps
 The utilization of the flow prediction model should be deployed in real-time in order to provide useful flow predictions for the treatment plant operators.  
