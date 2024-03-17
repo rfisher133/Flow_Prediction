@@ -16,39 +16,36 @@ Can a machine learning model be utilized to predict the flows at a wastewater tr
 
 #### Data Sources
 Three sources are data will be utilized to build a training and test set for the model.
-1. Flow data data collection from a treatment in Rockland County, New York was utilized. The data include the daily average influent flow to the treatment plant.
-2. Data collected from the nearest National Weather Service monitoring station. The information from the station include precipitation and temperature will be utilized in the model.
-3. River flow data from a U.S. Geologic stream gauging station. The flow data will be utilized in the model to infer groundwater and the potential on water infiltration into the wastewater collection system. 
+1. Flow data data collected from a treatment in Rockland County, New York was utilized. The data included the daily average influent flow to the treatment plant.
+2. Data collected from the nearby New York State Mesonet weather station. The information from the station include hourly precipitation.
+3. River flow data from a U.S. Geologic stream gauging station. The flow data was utilized in the model to infer groundwater and the potential on water infiltration into the wastewater collection system. 
 
 #### Methodology
-The machine learning model has been setup to allow the treatment plant operator to use current available information to make a prediction of the flows to the treatment plant tomorrow.
 The data from the three different source was cleaned and combined into one dataset. Feature engineering was used to develope the features(inputs) that a treatment plant operator would have avialable to enter to make their prediction. 
 A regression model was trained on the data and scored based performation with a set of testing data.
 
 The features used as input to the model include:
-- Forecast Temperature 
 - Forecast Precipitation
-- Todays temperature
-- Todays precipitation
-- Todays wwtp flow
-- Todays river flow
-- Yesterdays temperature
-- Yesterdays precipitation
-- Yesterdays wwtp flow
-- Yesterdays river flow
+- Current and hsitoric precipitation
+- Current and historic treatment plant flow
+- Current and historic river flow
 
-The target data to predict in the model is the forecast wwtp flows for tomorrow. 
+The target data to predict in the model is the forecast wwtp flows for the following day. 
 
 The following SciKitLearn regression models were utilized:
 - Linear Regression
 - Polynomial Regression
 - Ridge Regression
 - Lasso Regression
+- KNeighbors Regression
+- Support Vector Regression
 
 
 #### Results
-Models were evaulated on Mean Absolute Error (MAE) to avoid overfitting on the few peak flows that are far from the average.
+Models were evaulated on Mean Absolute Error (MAE) and the R2 score. The MAE was chosen to avoid overfitting on the few peak flows that are far from the average.
 The results of the models used are shown in the table below.
+
+
 - The Ridge regression model had the best reuslts.
 - The most important features were found to be:
   -wwtp flow yesterday
