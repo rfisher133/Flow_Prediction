@@ -9,7 +9,9 @@ The flow into wastewater treatment plants can be predicted by utilizing a linear
 The flow into wastewater treatment plants is influenced by precipitation and groundwater that infiltrates into the wastewater collections system piping. This is a particular for old aging infrasture in wet areas such as the Northeast United States. The spike in flows to a treatment plant require the operations staff to adjust treatment operations, place additional treat basins in service and call up addition operations staff to react to the sudden increase in flows. The high flows caused by precipitation events can cause overflows, bypass of treatment or damage to equipment. 
 
 The increase in flows is typically unknown to the operators and they rely on their intuition to estimate the increase in flows due to forecasted weather events. The intent of the project is to develop a machine learning model to help predict the flow to the treatment plant based on forecasted precipitation events. 
-
+    <center>
+        <img src = images/overview.png width = 35%/>
+    </center>
 
 #### Research Question
 Can a machine learning model be utilized to predict the flows at a wastewater treatment given the current known conditions and the available forecast storm precipitation event? 
@@ -46,7 +48,7 @@ Models were evaulated on Mean Absolute Error (MAE) and the R2 score. The MAE was
  - The KNeighbors and SVR did well but not as good as the Ridge and Lasso Regression.
 The results of the models evaluated are shown in the table below. The results are compared to a base model where the predicted flow is edqual to mean flow at the treatment plant. 
     <center>
-        <img src = images/flow_results.png width = 35%/>
+        <img src = images/results_table.png width = 35%/>
     </center>
 
 The Features that were most important in the best model (Ridge Regression) were: 
