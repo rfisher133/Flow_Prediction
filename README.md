@@ -10,7 +10,7 @@ The flow into wastewater treatment plants is influenced by precipitation and gro
 
 The increase in flows is typically unknown to the operators and they rely on their intuition to estimate the increase in flows due to forecasted weather events. The intent of the project is to develop a machine learning model to help predict the flow to the treatment plant based on forecasted precipitation events. 
     <center>
-        <img src = images/overview.png width = 60%/>
+        <img src = images/overview.png width = 70%/>
     </center>
 
 
@@ -21,7 +21,7 @@ Can a machine learning model be utilized to predict the flows at a wastewater tr
 Three sources are data will be utilized to build a training and test set for the model.
 1. Flow data data collected from a treatment in Rockland County, New York was utilized. The data included the daily average influent flow to the treatment plant.
 2. Data collected from the nearby New York State Mesonet weather station. The information from the station include hourly precipitation.
-3. River flow data from a U.S. Geologic stream gauging station. The flow data was utilized in the model to infer groundwater and the potential on water infiltration into the wastewater collection system. 
+3. River flow data from a U.S. Geologic Survey stream gauging station. The flow data was utilized in the model to infer groundwater and the potential on water infiltration into the wastewater collection system. 
 
 #### Methodology
 The data from the three different source was cleaned and combined into one dataset. Feature engineering was used to develope the features(inputs) that a treatment plant operator would have avialable to enter to make their prediction. 
@@ -45,12 +45,12 @@ The following SciKitLearn regression models were utilized:
 #### Results
 Models were evaulated on Mean Absolute Error (MAE) and the R2 score. The MAE was chosen to avoid overfitting on the few peak flows that are far from the average.
  - Ridge and Lasso regression were the best performing models.
- - Polynmial regression overfit on the training data and did not provide good results for this data.
+ - Polynomial regression overfit on the training data and did not provide good results for this data.
  - The KNeighbors and SVR did well but not as good as the Ridge and Lasso Regression.
 The results of the models evaluated are shown in the table below. The results are compared to a base model where the predicted flow is edqual to mean flow at the treatment plant.
 
     <center>
-        <img src = images/results_table.png width = 50%/>
+        <img src = images/results_table.png width = 60%/>
     </center>
 
 The Features that were most important in the best model (Ridge Regression) were: 
@@ -63,7 +63,7 @@ The Features that were most important in the best model (Ridge Regression) were:
 
 The treatment plant in this project has a mean flow of 23 million gallons per day (mgd) with a range of from from  13 mgd to 64 mgd. The Ridge model was able to predict the flow of treatment plant with a +/- 1.7 (mgd). The flow prediction test set graph is shown below. 
     <center>
-        <img src = images/result_graph.png width = 80%/>
+        <img src = images/result_graph.png width = 90%/>
     </center>
 #### Next steps
 The utilization of the flow prediction model should be deployed in real-time in order to provide useful flow predictions for the treatment plant operators.  
