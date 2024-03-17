@@ -31,6 +31,16 @@ The features used as input to the model include:
 - Current and historic river flow
 
 The target data to predict in the model is the forecast wwtp flows for the following day. 
+  Model	      Train MAE	Test MAE	Test R2 Score
+  Base Model	3.21	3.16	-0.01
+  Linear Regression	1.51	1.78	0.63
+  Polynomial Regression	1.21	3.05	-3.31
+  Ridge Regression	1.54	1.72	0.67
+  Lasso Regression	1.51	1.75	0.65
+  KNeighborsRegressor	0	1.92	0.52
+  SVR	0.97	1.84	0.61
+
+
 
 The following SciKitLearn regression models were utilized:
 - Linear Regression
