@@ -10,8 +10,9 @@ The flow into wastewater treatment plants is influenced by precipitation and gro
 
 The increase in flows is typically unknown to the operators and they rely on their intuition to estimate the increase in flows due to forecasted weather events. The intent of the project is to develop a machine learning model to help predict the flow to the treatment plant based on forecasted precipitation events. 
     <center>
-        <img src = images/overview.png width = 35%/>
+        <img src = images/overview.png width = 60%/>
     </center>
+
 
 #### Research Question
 Can a machine learning model be utilized to predict the flows at a wastewater treatment given the current known conditions and the available forecast storm precipitation event? 
@@ -46,9 +47,10 @@ Models were evaulated on Mean Absolute Error (MAE) and the R2 score. The MAE was
  - Ridge and Lasso regression were the best performing models.
  - Polynmial regression overfit on the training data and did not provide good results for this data.
  - The KNeighbors and SVR did well but not as good as the Ridge and Lasso Regression.
-The results of the models evaluated are shown in the table below. The results are compared to a base model where the predicted flow is edqual to mean flow at the treatment plant. 
+The results of the models evaluated are shown in the table below. The results are compared to a base model where the predicted flow is edqual to mean flow at the treatment plant.
+
     <center>
-        <img src = images/results_table.png width = 35%/>
+        <img src = images/results_table.png width = 50%/>
     </center>
 
 The Features that were most important in the best model (Ridge Regression) were: 
@@ -59,14 +61,18 @@ The Features that were most important in the best model (Ridge Regression) were:
  - Current day flow at the treatment plant.
  - Flow in the adjacent river on the current day.
 
+The treatment plant in this project has a mean flow of 23 million gallons per day (mgd) with a range of from from  13 mgd to 64 mgd. The Ridge model was able to predict the flow of treatment plant with a +/- 1.7 (mgd). The flow prediction test set graph is shown below. 
+    <center>
+        <img src = images/results_graph.png width = 60%/>
+    </center>
 #### Next steps
-The precipitation data was found be the most significant feature in the flow prediction as anticipated. There is a known lag from the receiveing preciptation to the increase in flows at the treatment plant. However, the precipation data is a daily value only and precipiation received in the morning would have more of an influence on the daily treatment plant flow than precipitation recieved in the evening that would not result in treatment plant flow increase until the start of the next day. Therefore, it would be advantages to obtain precipration data on an hourly basis instead of a daily basis to potentially improve the prediction model. 
-
+The utilization of the flow prediction model should be deployed in real-time in order to provide useful flow predictions to the treatment plant operators.  
 
 #### Outline of project
-
-
-
+The Jupyter notebooks for this project are arrranged as follows:
+1. Exporatory Data Analysis: [flow_prediction_EDA](https://github.com/rfisher133/Flow_Prediction/blob/main/1_flow_prediction_EDA.ipynb)
+2. Feature Engineering: [flow_prediction_feature_engineering](https://github.com/rfisher133/Flow_Prediction/blob/main/2_flow_prediction_feature_engineering.ipynb)
+3. Modeling: [flow_prediction_model](https://github.com/rfisher133/Flow_Prediction/blob/main/3_flow_prediction_model.ipynb)
 
 ##### Contact and Further Information
 Ryan Fisher at r.fisher.pe@gmail.com
