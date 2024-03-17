@@ -66,7 +66,7 @@ The utilization of the flow prediction model should be deployed in real-time in 
 
 #### Outline of project
 The Jupyter notebooks for this project arrranged as follows:
-1. Exporatory Data Analysis [flow_prediction_EDA](https://github.com/)
+1. Exporatory Data Analysis [flow_prediction_EDA](https://github.com/rfisher133/Flow_Prediction/blob/main/1_flow_prediction_EDA.ipynb)
 2. Feature Engineering:
 3. Modeling: 
 
